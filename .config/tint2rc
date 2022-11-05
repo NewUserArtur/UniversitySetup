@@ -1,0 +1,88 @@
+#-------------------------------------
+# Panel
+panel_items = E
+panel_size = 100% 30 
+panel_margin = 0 1
+panel_padding = 6 0 0
+panel_background_id = 1
+wm_menu = 1
+panel_dock = 0
+panel_position = bottom center horizontal
+panel_layer = bottom
+panel_monitor = all
+panel_shrink = 0
+autohide = 0
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 1.5
+autohide_height = 6
+strut_policy = follow_size
+panel_window_name = tint2
+disable_transparency = 0
+mouse_effects = 1
+font_shadow = 0
+mouse_hover_icon_asb = 20 0 20
+mouse_pressed_icon_asb = 100 0 0
+
+#-------------------------------------
+# Separator 1
+separator = new
+separator_background_id = 0
+separator_color = #5d8185 60
+separator_style = line
+separator_size = 2
+separator_padding = 4 8
+
+#-------------------------------------
+# Separator 2
+separator = new
+separator_background_id = 0
+separator_color = #5d8185 60
+separator_style = line
+separator_size = 2
+separator_padding = 4 8
+
+#-------------------------------------
+# Executor 1
+execp = new
+execp_command = python3 /home/arthur/university/.scripts/current-course.py
+execp_interval = 5
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_tooltip = Current course
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Droid Sans Fallback 12
+execp_font_color = #00ffff 100
+execp_padding = 0 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+
+#-------------------------------------
+# Executor 2
+execp = new
+execp_command = hostname
+execp_interval = 1
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 1
+execp_markup = 1
+execp_tooltip = Total Uptime
+execp_lclick_command = x-terminal-emulator --command=htop; exit
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Droid Sans Fallback 12
+execp_font_color = #00ffff 100
+execp_padding = 2 2
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
