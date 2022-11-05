@@ -1,0 +1,7 @@
+# Fdb version 3
+["lualatex"] 0 "../current-year/.preamble.tex" ".preamble.pdf" ".preamble" 0
+  "../current-year/.preamble.tex" 0 -1 0 ""
+  ".preamble.aux" 1667401781 32 3985256e7290058c681f74d7a3565a19 ""
+  (generated)
+  ".preamble.log"
+  ".preamble.pdf"

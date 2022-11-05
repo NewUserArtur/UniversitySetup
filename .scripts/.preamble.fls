@@ -1,0 +1,7 @@
+PWD /home/arthur/university/.scripts
+INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
+INPUT ../current-year/.preamble.tex
+OUTPUT preamble.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.lua
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ltluatex.lua
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.lua

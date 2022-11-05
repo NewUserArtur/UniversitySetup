@@ -1,0 +1,26 @@
+super + shift + c
+    python3 PPATH/.scripts/course_selection.py
+
+super + shift + y
+    python3 PPATH/.scripts/year_selection.py
+
+super + shift + v
+    python3 PPATH/.scripts/alter_master.py
+
+super + shift + l
+    python3 PPATH/.scripts/select_lecture.py
+
+super + shift + m
+    zathura PPATH/current-course/master.pdf
+
+super + shift + r
+    xdg-open PPATH/current-course
+
+super + shift + j
+    x-terminal-emulator --workdir=PPATH/current-course
+
+super + shift + t
+    rofi-theme-selector
+
+super + shift + i
+    python3 PPATH/.scripts/status_bar_toggle.py
