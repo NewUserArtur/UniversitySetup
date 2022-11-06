@@ -1,10 +1,8 @@
 # general packages
 {
-    sudo apt install $(cat .config/requirements)
+    sudo apt update && sudo apt install $(cat .config/requirements)
 } || {
-    brew install $(cat .config/requirements)
-} || {
-    sudo dnf install $(cat .config/requirements)
+    sudo dnf update && sudo dnf install $(cat .config/requirements)
 } || {
     echo "Could not install required packages"
     exit 1
@@ -23,8 +21,8 @@ while true; do
     echo "Enter path where to install"
     {
         read mypath
-        mkdir $mypath
-        mkdir $mypath/.config
+        mkdir -p $mypath
+        mkdir -p $mypath/.config
         cp .config/sxhkdrc $mypath/.config
         cp .config/tint2rc $mypath/.config
         mydata=$(cat .config/sxhkdrc)
