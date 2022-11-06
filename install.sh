@@ -1,10 +1,10 @@
 # general packages
 {
-    apt install $(cat .config/requirements)
+    sudo apt install $(cat .config/requirements)
 } || {
     brew install $(cat .config/requirements)
 } || {
-    dnf install $(cat .config/requirements)
+    sudo dnf install $(cat .config/requirements)
 } || {
     echo "Could not install required packages"
     exit 1
