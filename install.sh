@@ -27,12 +27,12 @@ while true; do
         mkdir $path/.config
         cp .config/sxhkdrc $path/.config
         cp .config/tint2rc $path/.config
-        echo "${$(cat .config/sxhkrdrc)//PATH/"$path}" > $path/.config/sxhkdrc
+        echo "${$(cat .config/sxhkdrc)//PATH/"$path"}" > $path/.config/sxhkdrc
         cp -r .scripts $path
         cp -r .templates $path
         cp -r .UltiSnips $path
         mkdir -p $HOME/.config/autostart
-        echo "${$(cat .config/sxhkd.desktop)./PATH/"$path"}" > $HOME/.config/autostart/sxhkd_uni.desktop
+        echo "${$(cat .config/sxhkd.desktop)//PATH/"$path"}" > $HOME/.config/autostart/sxhkd_uni.desktop
         mkdir -p $HOME/.vim/autoload
         cp .config/plug.vim $HOME/.vim/autoload
         echo "$(cat .config/.vimrc)" >> $HOME/.vimrc
