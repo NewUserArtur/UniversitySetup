@@ -39,6 +39,6 @@ while true; do
 
         break
     } || {
-        echo "Error; Try again"
+        echo "Error. Try again"
     }
 done
