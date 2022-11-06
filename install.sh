@@ -44,3 +44,5 @@ while true; do
         echo "Error. Try again"
     }
 done
+
+echo Done 
