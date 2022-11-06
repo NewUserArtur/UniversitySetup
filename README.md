@@ -30,7 +30,11 @@ Usage:
 
 
 Useful links:
+
 My inspiration: https://castel.dev/post/lecture-notes-1/
+
 UltiSnips: https://github.com/SirVer/ultisnips
+
 VimTex: https://github.com/lervag/vimtex
+
 My email for suggestions: mailg9737@gmail.com
