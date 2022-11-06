@@ -1,6 +1,6 @@
-set runtimepath+=~/.vim/bundle/ultisnips-master
-set rtp+=~/university
-set rtp+=~/university/current_course
+#set runtimepath+=~/.vim/bundle/ultisnips-master
+set rtp+=MYPATH
+set rtp+=MYPATH/current_course
 
 setlocal spell
 set spelllang=la,uk,en_us
