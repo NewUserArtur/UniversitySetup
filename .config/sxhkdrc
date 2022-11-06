@@ -1,26 +1,26 @@
 super + shift + c
-    python3 PATH/.scripts/course_selection.py
+    python3 MYPATH/.scripts/course_selection.py
 
 super + shift + y
-    python3 PATH/.scripts/year_selection.py
+    python3 MYPATH/.scripts/year_selection.py
 
 super + shift + v
-    python3 PATH/.scripts/alter_master.py
+    python3 MYPATH/.scripts/alter_master.py
 
 super + shift + l
-    python3 PATH/.scripts/select_lecture.py
+    python3 MYPATH/.scripts/select_lecture.py
 
 super + shift + m
-    zathura PATH/current-course/master.pdf
+    zathura MYPATH/current-course/master.pdf
 
 super + shift + r
-    xdg-open PATH/current-course
+    xdg-open MYPATH/current-course
 
 super + shift + j
-    x-terminal-emulator --workdir=PATH/current-course
+    x-terminal-emulator --workdir=MYPATH/current-course
 
 super + shift + t
     rofi-theme-selector
 
 super + shift + i
-    python3 PATH/.scripts/status_bar_toggle.py
+    python3 MYPATH/.scripts/status_bar_toggle.py

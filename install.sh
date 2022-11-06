@@ -22,17 +22,17 @@
 while true; do
     echo "Enter path where to install"
     {
-        read path
-        mkdir $path
-        mkdir $path/.config
-        cp .config/sxhkdrc $path/.config
-        cp .config/tint2rc $path/.config
-        echo "${$(cat .config/sxhkdrc)//PATH/"$path"}" > $path/.config/sxhkdrc
-        cp -r .scripts $path
-        cp -r .templates $path
-        cp -r .UltiSnips $path
+        read mypath
+        mkdir $mypath
+        mkdir $mypath/.config
+        cp .config/sxhkdrc $mypath/.config
+        cp .config/tint2rc $mypath/.config
+        echo "${$(cat .config/sxhkdrc)//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc
+        cp -r .scripts $mypath
+        cp -r .templates $mypath
+        cp -r .UltiSnips $mypath
         mkdir -p $HOME/.config/autostart
-        echo "${$(cat .config/sxhkd.desktop)//PATH/"$path"}" > $HOME/.config/autostart/sxhkd_uni.desktop
+        echo "${$(cat .config/sxhkd.desktop)//MYPATH/"$mypath"}" > $HOME/.config/autostart/sxhkd_uni.desktop
         mkdir -p $HOME/.vim/autoload
         cp .config/plug.vim $HOME/.vim/autoload
         echo "$(cat .config/.vimrc)" >> $HOME/.vimrc
