@@ -21,6 +21,7 @@ while true; do
     echo "Enter path where to install"
     {
         read mypath
+        eval mypath=$mypath
         mkdir -p $mypath
         mkdir -p $mypath/.config
         cp .config/sxhkdrc $mypath/.config
@@ -32,10 +33,13 @@ while true; do
         cp -r .UltiSnips $mypath
         mkdir -p $HOME/.config/autostart
         mydata=$(cat .config/sxhkd.desktop)
-        echo "${data//MYPATH/"$mypath"}" > $HOME/.config/autostart/sxhkd_uni.desktop
+        echo "${mydata//MYPATH/"$mypath"}" > $HOME/.config/autostart/sxhkd_uni.desktop
         mkdir -p $HOME/.vim/autoload
         cp .config/plug.vim $HOME/.vim/autoload
-        echo "$(cat .config/.vimrc)" >> $HOME/.vimrc
+        mydata=$(cat .config/.vimrc)
+        echo "${mydata//MYPATH/"$mypath"}" >> $HOME/.vimrc
+        mkdir -p /usr/share/vim/vim90/spell
+        cp .config/spell/* /usr/share/vim/vim90/spell
 
         break
     } || {
