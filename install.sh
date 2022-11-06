@@ -40,6 +40,10 @@ while true; do
         echo "${mydata//MYPATH/"$mypath"}" >> $HOME/.vimrc
         mkdir -p /usr/share/vim/vim90/spell
         cp .config/spell/* /usr/share/vim/vim90/spell
+        curl -LO https://github.com/SirVer/ultisnips/archive/master.zip
+        unzip master.zip
+        mkdir -p $HOME/.vim/bundle
+        cp -r ultisnips $HOME/.vim/bundle/
 
         break
     } || {
