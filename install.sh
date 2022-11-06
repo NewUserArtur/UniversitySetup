@@ -1,3 +1,9 @@
+ath/.config 
+                                                                                                                   
+┌──(arthur㉿arthur)-[~/university]
+└─$ echo "${$(cat .config/sxhkdrc)//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc
+                                                                                                                   
+┌──(arthur㉿arthur)-[~/university]
 # general packages
 {
     sudo apt install $(cat .config/requirements)
@@ -27,12 +33,14 @@ while true; do
         mkdir $mypath/.config
         cp .config/sxhkdrc $mypath/.config
         cp .config/tint2rc $mypath/.config
-        echo "${$(cat .config/sxhkdrc)//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc
+        mydata=$(cat .config/sxhkdrc)
+        echo "${mydata//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc
         cp -r .scripts $mypath
         cp -r .templates $mypath
         cp -r .UltiSnips $mypath
         mkdir -p $HOME/.config/autostart
-        echo "${$(cat .config/sxhkd.desktop)//MYPATH/"$mypath"}" > $HOME/.config/autostart/sxhkd_uni.desktop
+        mydata=$(cat .config/sxhkd.desktop)
+        echo "${data//MYPATH/"$mypath"}" > $HOME/.config/autostart/sxhkd_uni.desktop
         mkdir -p $HOME/.vim/autoload
         cp .config/plug.vim $HOME/.vim/autoload
         echo "$(cat .config/.vimrc)" >> $HOME/.vimrc
