@@ -1,9 +1,3 @@
-ath/.config 
-                                                                                                                   
-┌──(arthur㉿arthur)-[~/university]
-└─$ echo "${$(cat .config/sxhkdrc)//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc
-                                                                                                                   
-┌──(arthur㉿arthur)-[~/university]
 # general packages
 {
     sudo apt install $(cat .config/requirements)
