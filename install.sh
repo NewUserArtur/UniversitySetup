@@ -42,8 +42,7 @@ while true; do
         cp .config/spell/* /usr/share/vim/vim90/spell
         curl -LO https://github.com/SirVer/ultisnips/archive/master.zip
         unzip master.zip
-        mkdir -p $HOME/.vim/bundle
-        cp -r ultisnips $HOME/.vim/bundle/
+        cp -r ultisnips $mypath/.config
 
         break
     } || {

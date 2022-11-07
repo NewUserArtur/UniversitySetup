@@ -1,4 +1,4 @@
-set runtimepath+=~/.vim/bundle/ultisnips-master
+set runtimepath+=MYPATH/.config/ultisnips
 set rtp+=MYPATH
 set rtp+=MYPATH/current_course
 
