@@ -38,7 +38,7 @@ while true; do
         cp .config/plug.vim $HOME/.vim/autoload &&
         mydata=$(cat .config/.vimrc) &&
         echo "${mydata//MYPATH/"$mypath"}" >> $HOME/.vimrc &&
-        mkdir -p /usr/share/vim/vim90/spell &&
+        sudo mkdir -p /usr/share/vim/vim90/spell &&
         sudo cp .config/spell/* /usr/share/vim/vim90/spell &&
         curl -LO https://github.com/SirVer/ultisnips/archive/master.zip &&
         unzip master.zip &&
