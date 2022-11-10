@@ -1,1 +1,1 @@
-texlive-base texlive-science vim tint2 zathura rofi python3 python3-pip sxhkd curl unzip
+texlive-base texlive-science vim tint2 zathura rofi python3 python3-pip sxhkd curl unzip latexmk
