@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # general packages
 {
     sudo apt update && sudo apt install $(cat .config/requirements)
@@ -26,7 +28,7 @@ while true; do
         mkdir -p $mypath/.config &&
         cp .config/sxhkdrc $mypath/.config &&
         cp .config/tint2rc $mypath/.config &&
-        mydata=$(cat .config/sxhkdrc) &&
+        mydata=`cat .config/sxhkdrc` &&
         echo "${mydata//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc &&
         cp -r .scripts $mypath &&
         cp -r .templates $mypath &&
