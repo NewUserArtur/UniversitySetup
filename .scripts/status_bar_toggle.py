@@ -14,5 +14,5 @@ else:
 note = notifypy.Notify()
 note.title = "Info"
 note.application = "University scheduler"
-note.message = "Current course: {}".format(yaml_func.read_line(PREF+"current-course/info.yaml", title))
+note.message = "Current course: {}".format(yaml_func.read_line(PREF+"current-course/info.yaml", "title"))
 note.send()
