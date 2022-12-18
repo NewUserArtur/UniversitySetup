@@ -28,7 +28,7 @@ while true; do
         mkdir -p $mypath/.config &&
         cp .config/sxhkdrc $mypath/.config &&
         cp .config/tint2rc $mypath/.config &&
-        mydata=`cat .config/sxhkdrc` &&
+        mydata=$(cat .config/sxhkdrc) &&
         echo "${mydata//MYPATH/"$mypath"}" > $mypath/.config/sxhkdrc &&
         cp -r .scripts $mypath &&
         cp -r .templates $mypath &&
@@ -40,11 +40,16 @@ while true; do
         cp .config/plug.vim $HOME/.vim/autoload &&
         mydata=$(cat .config/.vimrc) &&
         echo "${mydata//MYPATH/"$mypath"}" >> $HOME/.vimrc &&
-        sudo mkdir -p /usr/share/vim/vim90/spell &&
-        sudo cp .config/spell/* /usr/share/vim/vim90/spell &&
         curl -LO https://github.com/SirVer/ultisnips/archive/master.zip &&
+        rm -r ultisnips-master &&
         unzip master.zip &&
         cp -r ultisnips-master $mypath/.config &&
+        tmp=$(find /usr/share/vim/ -maxdepth 1 -regextype sed -regex '/usr/share/vim/vim[0-9]\+') &&
+        tmp=(${tmp//\n/ }) &&
+        tmp=("${tmp[@]#/usr/share/vim/vim}") &&
+        tmp=$(printf '%d\n' "${tmp[@]}" | sort -nr | head -n1) &&
+        sudo mkdir -p /usr/share/vim/vim$tmp/spell &&
+        sudo cp .config/spell/* /usr/share/vim/vim$tmp/spell &&
 
         break
     } || {
