@@ -1,26 +1,26 @@
-alt+ shift + c
+super + shift + c
     python3 MYPATH/.scripts/course_selection.py
 
-alt + shift + y
+super + shift + y
     python3 MYPATH/.scripts/year_selection.py
 
-alt + shift + v
+super + shift + v
     python3 MYPATH/.scripts/alter_master.py
 
-alt + shift + l
+super + shift + l
     python3 MYPATH/.scripts/select_lecture.py
 
-alt + shift + m
+super + shift + m
     zathura MYPATH/current-course/master.pdf
 
-alt + shift + r
+super + shift + r
     xdg-open MYPATH/current-course
 
-alt + shift + j
+super + shift + j
     x-terminal-emulator --workdir=MYPATH/current-course
 
-alt + shift + t
+super + shift + t
     rofi-theme-selector
 
-alt + shift + i
+super + shift + i
     python3 MYPATH/.scripts/status_bar_toggle.py
