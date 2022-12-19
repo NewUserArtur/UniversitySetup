@@ -7,6 +7,8 @@ import subprocess
 import datetime
 from update_master import *
 
+import notifypy
+
 pref = PREF+"current-course/"
 lectures = list(reversed(list(sorted(list_lectures(pref)))))
 printd(lectures)
@@ -73,4 +75,4 @@ if lecture == len(lecture_titles):
 else:
     lecture = lectures[lecture]
 
-subprocess.run(["vim", pref+lecture])
+subprocess.run(["x-terminal-emulator", "-e", "vim", pref+lecture])
