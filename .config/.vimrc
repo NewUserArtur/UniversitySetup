@@ -33,4 +33,5 @@ let g:UltiSnipsSnippetDirectories=['.UltiSnips']
 
 call plug#end()
 
+autocmd FileType tex :PlugInstall ultisnips
 autocmd FileType tex :VimtexCompile
