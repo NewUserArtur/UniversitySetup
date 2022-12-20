@@ -40,10 +40,6 @@ while true; do
         cp .config/plug.vim $HOME/.vim/autoload &&
         mydata=$(cat .config/.vimrc) &&
         echo "${mydata//MYPATH/"$mypath"}" >> $HOME/.vimrc &&
-        curl -LO https://github.com/SirVer/ultisnips/archive/master.zip &&
-        rm -r ultisnips-master &&
-        unzip master.zip &&
-        cp -r ultisnips-master $mypath/.config &&
         tmp=$(find /usr/share/vim/ -maxdepth 1 -regextype sed -regex '/usr/share/vim/vim[0-9]\+') &&
         tmp=(${tmp//\n/ }) &&
         tmp=("${tmp[@]#/usr/share/vim/vim}") &&
