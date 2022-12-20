@@ -1,6 +1,6 @@
-set runtimepath+=MYPATH/.config/ultisnips
-set rtp+=MYPATH
-set rtp+=MYPATH/current_course
+set runtimepath+=/home/arthur/university_setup/.config
+set rtp+=/home/arthur/university_setup
+set rtp+=/home/arthur/university_setup/current_course
 
 setlocal spell
 set spelllang=la,uk,en_us
@@ -32,5 +32,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
 let g:UltiSnipsSnippetDirectories=['.UltiSnips']
 
 call plug#end()
+autocmd VimEnter *
+  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 
 autocmd FileType tex :VimtexCompile
