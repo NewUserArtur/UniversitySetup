@@ -1,6 +1,6 @@
-set runtimepath+=/home/arthur/university_setup/.config
-set rtp+=/home/arthur/university_setup
-set rtp+=/home/arthur/university_setup/current_course
+set runtimepath+=MYPATH/.config
+set rtp+=MYPATH
+set rtp+=MYPATH/current_course
 
 setlocal spell
 set spelllang=la,uk,en_us
