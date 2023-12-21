@@ -52,16 +52,7 @@ if course == len(course_titles):
     
     os.mkdir(pref+fld_name+"/.UltiSnips")
     os.mkdir(pref+fld_name+"/figures")
-
-    ok = 0
-    while ok < 2:
-        rsp = rofi.prompt("Copy the standard snippets? (y/n)", [] if ok == 0 else ["-mesg", "enter 'y' or 'n'"])
-        if rsp == "y":
-            os.popen("cp {}.UltiSnips/tex.snippets {}{}/.UltiSnips/tex.snippets".format(PREF, pref, fld_name))
-        elif rsp == "n":
-            pathlib.Path(pref+fld_name+"/.UltiSnips/tex.snippets").touch()
-        else:
-            ok = 1
+    pathlib.Path(pref+fld_name+"/.UltiSnips/tex.snippets").touch()
 
     f = open(pref+fld_name+"/info.yaml", "w")
     f.write("title: '" + option + "'")
