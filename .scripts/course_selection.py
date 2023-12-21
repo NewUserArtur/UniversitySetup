@@ -39,7 +39,7 @@ printd(course)
 if course == len(course_titles):
     ok = 0
     while ok < 2:
-        fld_name = rofi.prompt("Enter folder name", [] if ok == 0 else ["-mesg", "The name you entered might be inv    alid"])
+        fld_name = rofi.prompt("Enter folder name", [] if ok == 0 else ["-mesg", "The name you entered might be invalid"])
         printd(fld_name)
         if len(fld_name) == 0:
             sys.exit(0)
@@ -52,7 +52,16 @@ if course == len(course_titles):
     
     os.mkdir(pref+fld_name+"/.UltiSnips")
     os.mkdir(pref+fld_name+"/figures")
-    pathlib.Path(pref+fld_name+"/.UltiSnips/tex.snippets").touch()
+
+    ok = 0
+    while ok < 2:
+        rsp = rofi.prompt("Copy the standard snippets? (y/n)", [] if ok == 0 else ["-mesg", "enter 'y' or 'n'"])
+        if rsp == "y":
+            os.popen("cp {}.UltiSnips/tex.snippets {}{}/.UltiSnips/tex.snippets".format(PREF, pref, fld_name))
+        elif rsp == "n":
+            pathlib.Path(pref+fld_name+"/.UltiSnips/tex.snippets").touch()
+        else:
+            ok = 1
 
     f = open(pref+fld_name+"/info.yaml", "w")
     f.write("title: '" + option + "'")
